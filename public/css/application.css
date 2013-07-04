@@ -1,0 +1,56 @@
+#container {
+  margin: 20px auto;
+  width: 80%;
+  background-color: rgb(246,246,239);
+  min-width: 500px;
+}
+
+#posts ul {
+  padding-left: 5px;
+
+}
+
+#login {
+  margin: 0;
+  padding-top: 5px;
+  float: right;
+}
+
+
+#logo {
+  border: 1px solid white;
+  margin-top: 2px;
+  margin-left: 2px;
+}
+
+.top-row {
+  margin-bottom: 0px;
+}
+
+.bottom-row {
+  font-size: .75em;
+  margin-top: 0px;
+  padding-left: 1em;
+}
+
+header {
+  background-color: rgb(255,102,0);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: gray;
+}
+
+header h3, nav ul li, nav ul, nav {
+  display: inline;
+}
+
+
+ul {
+  list-style: none;
+}

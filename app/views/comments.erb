@@ -1,0 +1,33 @@
+<div id="container">
+  <header>
+    <img id="logo" src="https://news.ycombinator.com/y18.gif"> 
+    <h3>Hacker News</h3>
+    <nav>
+      <ul>
+        <li> <a href="#">new</a> | </li>
+        <li> <a href="#">comments</a> | </li>
+        <li> <a href="#">ask</a> | </li>
+        <li> <a href="#">jobs</a> | </li>
+        <li> <a href="#">submit</a> </li>
+      </ul>
+      <span id="login">
+        <a href="/login">login</a>
+      </span>
+    </nav>
+  </header>
+
+  <div id="posts">
+    <form action="/postcomment/<%=@id%>" method="post">
+      <p><textarea cols="50" rows="5" name="body" placeholder="text"></textarea></p>
+      <button type="submit">comment</button>
+    </form>
+    <ul>
+      <% @comments.each do |comment| %>
+      <li>
+        <p class="top-row"><%= "by #{comment.user.name} - #{comment.created_at.strftime("%B%e, %Y")}" %></p>
+        <p class="bottom-row"><%= comment.body %></p>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

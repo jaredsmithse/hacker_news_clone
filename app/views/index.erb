@@ -1,0 +1,31 @@
+<div id="container">
+  <header>
+    <img id="logo" src="https://news.ycombinator.com/y18.gif"> 
+    <h3>Hacker News</h3>
+    <nav>
+      <ul>
+        <li> <a href="#">new</a> | </li>
+        <li> <a href="#">comments</a> | </li>
+        <li> <a href="#">ask</a> | </li>
+        <li> <a href="#">jobs</a> | </li>
+        <li> <a href="/submit">submit</a> </li>
+        <li> <a href="/logout">logout</a> </li>
+      </ul>
+      <ul id="login">
+        <li> <a href="/login">login</a> </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="posts">
+    <ul>
+      <% @posts.each_with_index do |post, index| %>
+      <% break if index == 29 %>
+      <li>
+        <p class="top-row"><a href="/<%= index + 1 %>"><%= "#{index + 1}.  #{post.title}" %></a></p>
+        <p class="bottom-row"><%= "by #{post.user.name} #{post.created_at} | #{post.comments.size} comments" %></p>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
